@@ -4,12 +4,14 @@ def merge(arrA, arrB):
     merged_arr = [0] * elements
 
     # Your code here
-
+    #init the combined list that will hold the sorted elements from both a/b
     combined = []
     #these are our pointers, init the 2 pointers that start at each list 
+    #start of element 
     a = 0
     b = 0 
-
+    
+    #Traverse 
     while a < len(arrA) and b < len(arrB):
         #compare the elements that a/b point at 
         if arrA[a] < arrB[b]:
@@ -21,7 +23,7 @@ def merge(arrA, arrB):
             #increment pointers or else hang forever 
             b += 1
 
-        #at this point, we've finished traversing one of the list completley 
+        # at this point, we've finished traversing one of the list completley 
         # the loop will stop when one of them fails, we dont know which one 
         # we need to add all of the elements from the other list to the combined list 
     while a < len(arrA): # we dont know which one so we check both
