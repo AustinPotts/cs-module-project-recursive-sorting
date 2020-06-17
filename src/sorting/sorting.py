@@ -10,9 +10,9 @@ def merge(arrA, arrB):
     a = 0
     b = 0 
 
-    while a is < len(arrA) and b is < len(arrB):
+    while a < len(arrA) and b < len(arrB):
         #compare the elements that a/b point at 
-        if arrA[a] < B[b]:
+        if arrA[a] < arrB[b]:
             combined.append(arrA[a])
             #increment pointers 
             a += 1 
@@ -24,11 +24,11 @@ def merge(arrA, arrB):
         #at this point, we've finished traversing one of the list completley 
         # the loop will stop when one of them fails, we dont know which one 
         # we need to add all of the elements from the other list to the combined list 
-        while a < len(arrA): # we dont know which one so we check both
+    while a < len(arrA): # we dont know which one so we check both
             combined.append(arrA[a])
             #increment pointers 
             a += 1 
-        while b < len(arrB):
+    while b < len(arrB):
             combined.append(arrB[b])
             #increment pointers or else hang forever 
             b += 1
@@ -37,7 +37,7 @@ def merge(arrA, arrB):
             
 
 
-    return merged_arr
+    return combined
 
 # TO-DO: implement the Merge Sort function below recursively
 def merge_sort(arr):
@@ -53,7 +53,7 @@ def merge_sort(arr):
         #getting the right side with len array divide by 2 until the end 
         right = merge_sort(arr[len(arr) // 2:]) #we'll pass it the split arrays 
 
-        arr = merge(left,right)
+        arr = merge(left, right)
 
     #merge them back up
 
