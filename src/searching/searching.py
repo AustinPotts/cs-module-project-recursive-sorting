@@ -9,6 +9,5 @@ def binary_search(arr, target, start, end):
 # sorted in ascending order or in descending order
 # You can implement this function either recursively 
 # or iteratively
-def agnostic_binary_search(arr, target):
-    # Your code here
-
+#def agnostic_binary_search(arr, target):
+# Your code here
